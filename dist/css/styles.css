@@ -358,12 +358,13 @@ a {
   margin-right: auto;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px; }
-  /* line 107, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  margin-bottom: 20px;
+  opacity: 0; }
+  /* line 108, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
   .img-wrap img {
     max-width: 100%;
     margin: 0; }
-  /* line 112, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  /* line 113, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
   .img-wrap .img-note {
     width: 100%;
     padding: 10px;
@@ -375,61 +376,138 @@ a {
     margin-top: -5px;
     -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); }
-    /* line 123, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+    /* line 124, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
     .img-wrap .img-note p {
       color: white;
       margin: 0;
       max-width: 1000px; }
   @media screen and (max-width: 500px) {
-    /* line 131, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+    /* line 132, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
     .img-wrap .img-note {
       padding: 6px; }
-    /* line 134, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+    /* line 135, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
     .img-wrap p {
       font-size: 12px; } }
 
-/* line 141, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 142, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .wrap-mini {
   max-width: 375px; }
 
-/* line 145, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 146, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .pallette-1, .pallette-2, .pallette-3, .pallette-4, .pallette-5, .pallette-6 {
   height: 300px;
   width: 25%;
   display: inline-block;
   font-size: 0; }
-  /* line 151, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  /* line 152, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
   .pallette-1:not(:first-of-type), .pallette-2:not(:first-of-type), .pallette-3:not(:first-of-type), .pallette-4:not(:first-of-type), .pallette-5:not(:first-of-type), .pallette-6:not(:first-of-type) {
     margin-left: -6px; }
 
-/* line 156, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 157, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .pallette-1 {
   background-color: #152A68; }
 
-/* line 160, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 161, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .pallette-2 {
   background-color: #2D55CD; }
 
-/* line 164, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 165, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .pallette-3 {
   width: 15%;
   background-color: #2D8BCD; }
 
-/* line 169, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 170, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .pallette-4 {
   width: 2%;
   background-color: #FF1515; }
 
-/* line 174, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 175, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .pallette-5 {
   width: 20%;
   background-color: white; }
 
-/* line 179, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 180, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .pallette-6 {
   width: 13%;
   background-color: #74BCAD; }
 
-/* line 185, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+/* line 186, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 .bg-blue {
   background-color: #2D8BCD; }
+
+/* line 189, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+.show-all {
+  overflow: hidden;
+  max-height: 0px; }
+
+/* line 194, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+.hide-all {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #2D8BCD;
+  opacity: 1; }
+
+/* line 205, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+.non-load {
+  position: relative;
+  text-align: center; }
+  /* line 209, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  .non-load:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 100px;
+    border-left: 3px solid #7700FF;
+    display: block;
+    left: -webkit-calc(50% - 25px);
+    left: calc(50% - 25px);
+    top: -12px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite; }
+
+@-webkit-keyframes spin {
+  /* line 225, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  /* line 226, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  /* line 225, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  /* line 226, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+/* line 233, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+.come-in {
+  -webkit-transform: translateY(120px);
+  -ms-transform: translateY(120px);
+  transform: translateY(120px);
+  -webkit-animation: come-in 1s ease forwards;
+  animation: come-in 1s ease forwards; }
+
+@-webkit-keyframes come-in {
+  /* line 240, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes come-in {
+  /* line 240, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
