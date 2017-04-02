@@ -17,10 +17,184 @@ ul {
 
 
 body {
-  background-color: $purple;
+  background-color: white;
+  text-align: center;
+  font-family: 'Work Sans', helvetica, arial, sans-serif;
+  margin: 0;
 }
 
 
 //===============================================================================
 // HOME STLYES
 //===============================================================================
+
+p, h1, h2, h3 {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 24px;
+}
+
+h1 {
+	font-size: 60px;
+	color: white;
+
+	@media screen and (max-width: 500px) {
+		font-size: 30px;
+	}
+}
+
+h2 {
+	font-size: 32px;
+	color: #FFFFFF;
+	font-weight: 300;
+
+	@media screen and (max-width: 500px) {
+		font-size: 24px;
+	}
+}
+
+h3 {
+	font-size: 60px;
+	color: $bluedark;
+
+	@media screen and (max-width: 500px) {
+		font-size: 30px;
+	}
+}
+
+p {
+	font-size: 18px;
+	line-height: 32px;
+	color: $bluedark;
+	font-weight: 400;
+
+	@media screen and (max-width: 500px) {
+		font-size: 16px;
+		line-height: 28px;
+	}
+}
+
+a {
+	color: white;
+	&:hover {
+		color: $purple;
+	}
+}
+
+
+.section {
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inner {
+  align-self: center;
+}
+
+.img-wrap {
+	max-width: 1000px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+	margin-bottom: 20px;
+
+	img { 
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.img-note {
+		width: 100%;
+		padding: 10px;
+		background-color: $bluedark;
+		color: white;
+		font-weight: 400;
+		font-size: 14px;
+		margin: 0;
+		margin-top: -5px;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+
+		p {
+			color: white;
+			margin: 0;
+			max-width: 1000px;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.img-note {
+			padding: 6px;
+		}
+		p {
+			font-size: 12px;	
+		}
+		
+	}
+}
+
+.wrap-mini {
+	max-width: 375px;
+}
+
+.pallette-1, .pallette-2, .pallette-3, .pallette-4, .pallette-5, .pallette-6   {
+		height: 300px;
+		width: 25%;
+		display: inline-block;
+		font-size: 0;
+
+		&:not(:first-of-type) {
+			margin-left: -6px;
+		}
+}
+
+.pallette-1 { 
+	background-color: #152A68;
+}
+
+.pallette-2 { 
+	background-color: #2D55CD;
+}
+
+.pallette-3 { 
+	width: 15%;
+	background-color: #2D8BCD;
+}
+
+.pallette-4 { 
+	width: 2%;
+	background-color: #FF1515;
+}
+
+.pallette-5 { 
+	width: 20%;
+	background-color: white;
+}
+
+.pallette-6 { 
+	width: 13%;
+	background-color: #74BCAD;
+}
+
+
+.bg-blue { background-color: $bluemid; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
