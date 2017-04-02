@@ -278,7 +278,7 @@ body {
 
 /* line 31, /Users/itomblack/Repos/MLDC/src/sass/_home.scss */
 p, h1, h2, h3 {
-  max-width: 800px;
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 24px; }
