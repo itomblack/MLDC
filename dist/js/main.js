@@ -1,8 +1,12 @@
 $( document ).ready(function() {
   
   $(window).load(function() {  
-    $(".hide-all").hide();
+    // $(".hide-all").hide();
+    $(".hide-all").css("position", "absolute").animate({
+        top:  -1000
+    },1000);
     $(".show-all").removeClass("show-all");
+    $(".hide-all").delay( 800 ).fadeOut( 400 );;
   });
 
 
